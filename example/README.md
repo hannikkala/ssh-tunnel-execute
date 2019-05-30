@@ -2,6 +2,8 @@
 
 This image uses **hannikkala/ssh-tunnel-execute** as SSH tunnel creator in order to backup PostgreSQL database behind the jump server.
 
+This image uses https://github.com/heyman/docker-postgres-backup for backup operations.
+
 ## Usage
 
 #### 1. Rename *.env.example* to *.env* 
