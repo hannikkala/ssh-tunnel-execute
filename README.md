@@ -8,7 +8,7 @@ Docker image that can create all necessary SSH tunnels. Operations can easily be
 
 ## Usage
 
-Working example of extended image can be found [here](tree/master/example). The image backups PostgreSQL database into AWS S3.
+Working example of extended image can be found [here](https://github.com/hannikkala/ssh-tunnel-execute/tree/master/example). The image backups PostgreSQL database into AWS S3.
 
 ## Enviroment variables
 
