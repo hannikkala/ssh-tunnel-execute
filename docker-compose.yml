@@ -1,0 +1,6 @@
+version: '3.7'
+services:
+  ssh-tunnel-execute:
+    image: hannikkala/ssh-tunnel-execute
+    build:
+      context: .

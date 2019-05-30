@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+  backup:
+    image: hannikkala/ssh-tunnel-postgresql-demo
+    build:
+      context: .
+    environment:
+      - AWS_PROFILE=${AWS_PROFILE}
+      - S3_PATH=${S3_PATH}
+      - DB_HOST=${DB_HOST}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - SSH_USER_AND_HOST=${SSH_USER_AND_HOST}
+      - SSH_FORWARD_PORTS=${SSH_FORWARD_PORTS}
+    volumes:
+      - ~/.ssh/id_rsa:/root/.ssh/id_rsa
+      - ~/.aws/credentials:/root/.aws/credentials
+      - ./backups:/backups
+    command: sh -c "python backup.py"
